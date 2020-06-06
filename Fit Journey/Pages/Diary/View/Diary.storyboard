@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pqo-Nt-0qk">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Diary-->
+        <scene sceneID="Zlw-de-m7M">
+            <objects>
+                <viewController id="4si-df-A9q" customClass="DiaryController" customModule="Fit_Journey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e3x-mP-hwM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4PR-Fd-ZUq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4PR-Fd-ZUq" firstAttribute="trailing" secondItem="pfi-zY-NMb" secondAttribute="trailing" id="1Qp-lM-LbL"/>
+                            <constraint firstItem="4PR-Fd-ZUq" firstAttribute="top" secondItem="e3x-mP-hwM" secondAttribute="top" id="SQR-cw-G7A"/>
+                            <constraint firstItem="4PR-Fd-ZUq" firstAttribute="leading" secondItem="pfi-zY-NMb" secondAttribute="leading" id="Tvt-rC-TJ2"/>
+                            <constraint firstAttribute="bottom" secondItem="4PR-Fd-ZUq" secondAttribute="bottom" constant="20" symbolic="YES" id="uuI-fX-R2o"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pfi-zY-NMb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Diary" id="6MH-Ja-r3p">
+                        <barButtonItem key="backBarButtonItem" title="Diary" id="cGC-1W-BhJ"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="4PR-Fd-ZUq" id="gaU-Fk-9RD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CnR-Iv-UM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721.73913043478262" y="-531.02678571428567"/>
+        </scene>
+        <!--Diary-->
+        <scene sceneID="rvt-Cc-AKP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pqo-Nt-0qk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Diary" selectedImage="book" catalog="system" id="3hS-xk-9Ak"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lzy-bI-DPs">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4si-df-A9q" kind="relationship" relationship="rootViewController" id="kn5-wF-rFp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="trn-sr-71k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-188.40579710144928" y="-531.02678571428567"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book" catalog="system" width="64" height="50"/>
+    </resources>
+</document>
