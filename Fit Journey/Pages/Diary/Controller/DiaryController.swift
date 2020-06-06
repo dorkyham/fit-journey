@@ -11,15 +11,13 @@ import CloudKit
 
 class DiaryController : UIViewController {
     
-    var data : [DataModel]?
+    var data : [ActivityModel]?
     
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         loadTableView()
-        DataBuilder().getItem { (data) in
-            self.data = data
-        }
+        self.data = DataStore().retrieve()
     }
     @IBAction func writeIsTapped(_ sender: Any) {
         print("button write is tapped")

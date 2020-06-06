@@ -25,7 +25,14 @@ extension DiaryController : UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell  = tableView.dequeueReusableCell(withIdentifier: "dataCell", for: indexPath) as? DataTableViewCell
         cell?.dataLabel.text = data?[indexPath.row].title
-        cell?.dateLabel.text = data?[indexPath.row].date
+        
+        let formatter = DateFormatter()
+        //then again set the date format whhich type of output you need
+        formatter.dateFormat = "dd-MMM-yyyy"
+        // again convert your date to string
+        var date = formatter.string(from: (data?[indexPath.row].date)!)
+
+        cell?.dateLabel.text = date
         cell?.delegate = self
         return cell!
     }

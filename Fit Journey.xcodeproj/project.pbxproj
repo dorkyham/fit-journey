@@ -21,11 +21,12 @@
 		B055BD2E248B810F00CB9C8F /* DiaryController + Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD2D248B810F00CB9C8F /* DiaryController + Delegate.swift */; };
 		B055BD30248B819B00CB9C8F /* DataListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B055BD2F248B819B00CB9C8F /* DataListCell.xib */; };
 		B055BD32248B820D00CB9C8F /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD31248B820D00CB9C8F /* DataTableViewCell.swift */; };
-		B055BD34248B84C800CB9C8F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD33248B84C800CB9C8F /* DataModel.swift */; };
 		B055BD38248B8BD500CB9C8F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B055BD37248B8BD500CB9C8F /* HealthKit.framework */; };
 		B055BD3E248B8E5900CB9C8F /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD3D248B8E5900CB9C8F /* PostData.swift */; };
 		B055BD44248B90A800CB9C8F /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B055BD43248B90A800CB9C8F /* Post.storyboard */; };
 		B055BD46248B918300CB9C8F /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD45248B918300CB9C8F /* PostController.swift */; };
+		B055BE01248BA66300CB9C8F /* FitJourneyDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B055BDFF248BA66300CB9C8F /* FitJourneyDataModel.xcdatamodeld */; };
+		B055BE04248BA70700CB9C8F /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BE03248BA70700CB9C8F /* DataStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,12 +67,13 @@
 		B055BD2D248B810F00CB9C8F /* DiaryController + Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiaryController + Delegate.swift"; sourceTree = "<group>"; };
 		B055BD2F248B819B00CB9C8F /* DataListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataListCell.xib; sourceTree = "<group>"; };
 		B055BD31248B820D00CB9C8F /* DataTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTableViewCell.swift; sourceTree = "<group>"; };
-		B055BD33248B84C800CB9C8F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		B055BD35248B8BD500CB9C8F /* Fit Journey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fit Journey.entitlements"; sourceTree = "<group>"; };
 		B055BD37248B8BD500CB9C8F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B055BD3D248B8E5900CB9C8F /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
 		B055BD43248B90A800CB9C8F /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		B055BD45248B918300CB9C8F /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		B055BE00248BA66300CB9C8F /* FitJourney.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FitJourney.xcdatamodel; sourceTree = "<group>"; };
+		B055BE03248BA70700CB9C8F /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,8 @@
 		B055BCEC248B70F400CB9C8F /* Fit Journey */ = {
 			isa = PBXGroup;
 			children = (
+				B055BE02248BA6E400CB9C8F /* Helper */,
+				B055BDFF248BA66300CB9C8F /* FitJourneyDataModel.xcdatamodeld */,
 				B055BD35248B8BD500CB9C8F /* Fit Journey.entitlements */,
 				B055BCED248B70F400CB9C8F /* AppDelegate.swift */,
 				B055BCEF248B70F400CB9C8F /* SceneDelegate.swift */,
@@ -178,7 +182,6 @@
 				B055BD39248B8E1800CB9C8F /* Post */,
 				B055BD26248B7D9500CB9C8F /* Controller */,
 				B055BD25248B7D8D00CB9C8F /* View */,
-				B055BD24248B7D8700CB9C8F /* Model */,
 			);
 			path = Diary;
 			sourceTree = "<group>";
@@ -189,14 +192,6 @@
 				B055BD29248B7E3400CB9C8F /* Browse.storyboard */,
 			);
 			path = Browse;
-			sourceTree = "<group>";
-		};
-		B055BD24248B7D8700CB9C8F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				B055BD33248B84C800CB9C8F /* DataModel.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		B055BD25248B7D8D00CB9C8F /* View */ = {
@@ -258,6 +253,14 @@
 				B055BD45248B918300CB9C8F /* PostController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		B055BE02248BA6E400CB9C8F /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				B055BE03248BA70700CB9C8F /* DataStore.swift */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -395,9 +398,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B055BD34248B84C800CB9C8F /* DataModel.swift in Sources */,
+				B055BE01248BA66300CB9C8F /* FitJourneyDataModel.xcdatamodeld in Sources */,
 				B055BD3E248B8E5900CB9C8F /* PostData.swift in Sources */,
 				B055BCEE248B70F400CB9C8F /* AppDelegate.swift in Sources */,
+				B055BE04248BA70700CB9C8F /* DataStore.swift in Sources */,
 				B055BD32248B820D00CB9C8F /* DataTableViewCell.swift in Sources */,
 				B055BD2C248B7E8000CB9C8F /* DiaryController.swift in Sources */,
 				B055BD46248B918300CB9C8F /* PostController.swift in Sources */,
@@ -719,6 +723,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B055BDFF248BA66300CB9C8F /* FitJourneyDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B055BE00248BA66300CB9C8F /* FitJourney.xcdatamodel */,
+			);
+			currentVersion = B055BE00248BA66300CB9C8F /* FitJourney.xcdatamodel */;
+			path = FitJourneyDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B055BCE2248B70F400CB9C8F /* Project object */;
 }
