@@ -23,6 +23,9 @@
 		B055BD32248B820D00CB9C8F /* DataTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD31248B820D00CB9C8F /* DataTableViewCell.swift */; };
 		B055BD34248B84C800CB9C8F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD33248B84C800CB9C8F /* DataModel.swift */; };
 		B055BD38248B8BD500CB9C8F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B055BD37248B8BD500CB9C8F /* HealthKit.framework */; };
+		B055BD3E248B8E5900CB9C8F /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD3D248B8E5900CB9C8F /* PostData.swift */; };
+		B055BD40248B8F5900CB9C8F /* FormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B055BD3F248B8F5900CB9C8F /* FormView.xib */; };
+		B055BD42248B8F9F00CB9C8F /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD41248B8F9F00CB9C8F /* FormTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		B055BD33248B84C800CB9C8F /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 		B055BD35248B8BD500CB9C8F /* Fit Journey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fit Journey.entitlements"; sourceTree = "<group>"; };
 		B055BD37248B8BD500CB9C8F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		B055BD3D248B8E5900CB9C8F /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		B055BD3F248B8F5900CB9C8F /* FormView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormView.xib; sourceTree = "<group>"; };
+		B055BD41248B8F9F00CB9C8F /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +175,7 @@
 		B055BD22248B7D7500CB9C8F /* Diary */ = {
 			isa = PBXGroup;
 			children = (
+				B055BD39248B8E1800CB9C8F /* Post */,
 				B055BD26248B7D9500CB9C8F /* Controller */,
 				B055BD25248B7D8D00CB9C8F /* View */,
 				B055BD24248B7D8700CB9C8F /* Model */,
@@ -217,6 +224,40 @@
 				B055BD37248B8BD500CB9C8F /* HealthKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B055BD39248B8E1800CB9C8F /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				B055BD3C248B8E3700CB9C8F /* Controller */,
+				B055BD3B248B8E3300CB9C8F /* View */,
+				B055BD3A248B8E2700CB9C8F /* Model */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		B055BD3A248B8E2700CB9C8F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B055BD3D248B8E5900CB9C8F /* PostData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B055BD3B248B8E3300CB9C8F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B055BD3F248B8F5900CB9C8F /* FormView.xib */,
+				B055BD41248B8F9F00CB9C8F /* FormTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B055BD3C248B8E3700CB9C8F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,6 +369,7 @@
 				B055BD2A248B7E3400CB9C8F /* Browse.storyboard in Resources */,
 				B055BD21248B789400CB9C8F /* RootTabBar.storyboard in Resources */,
 				B055BCF7248B70F600CB9C8F /* Preview Assets.xcassets in Resources */,
+				B055BD40248B8F5900CB9C8F /* FormView.xib in Resources */,
 				B055BCF4248B70F600CB9C8F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +396,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B055BD34248B84C800CB9C8F /* DataModel.swift in Sources */,
+				B055BD42248B8F9F00CB9C8F /* FormTableViewCell.swift in Sources */,
+				B055BD3E248B8E5900CB9C8F /* PostData.swift in Sources */,
 				B055BCEE248B70F400CB9C8F /* AppDelegate.swift in Sources */,
 				B055BD32248B820D00CB9C8F /* DataTableViewCell.swift in Sources */,
 				B055BD2C248B7E8000CB9C8F /* DiaryController.swift in Sources */,

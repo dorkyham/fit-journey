@@ -21,6 +21,10 @@ class DiaryController : UIViewController {
             self.data = data
         }
     }
+    @IBAction func writeIsTapped(_ sender: Any) {
+        print("button write is tapped")
+        performSegue(withIdentifier: "goToWritePost", sender: nil)
+    }
     
     func loadTableView(){
         tableView.delegate = self

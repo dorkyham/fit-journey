@@ -31,14 +31,48 @@
                     </view>
                     <navigationItem key="navigationItem" title="Diary" id="6MH-Ja-r3p">
                         <barButtonItem key="backBarButtonItem" title="Diary" id="cGC-1W-BhJ"/>
+                        <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="MDo-5T-Kb2">
+                            <connections>
+                                <action selector="writeIsTapped:" destination="4si-df-A9q" id="AtR-Ij-s0A"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="4PR-Fd-ZUq" id="gaU-Fk-9RD"/>
+                        <segue destination="bPE-Zy-yty" kind="modal" identifier="goToWritePost" id="vQu-Pz-hsr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CnR-Iv-UM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="721.73913043478262" y="-531.02678571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="dRN-LO-Euz">
+            <objects>
+                <viewController id="bPE-Zy-yty" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GTl-ec-Cfw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fDr-17-MGI">
+                                <rect key="frame" x="0.0" y="59" width="414" height="346"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ego-JU-7Mx" firstAttribute="bottom" secondItem="fDr-17-MGI" secondAttribute="bottom" constant="403" id="Gio-oZ-MyP"/>
+                            <constraint firstItem="fDr-17-MGI" firstAttribute="top" secondItem="ego-JU-7Mx" secondAttribute="top" constant="59" id="PI2-Q2-Hhy"/>
+                            <constraint firstAttribute="trailing" secondItem="fDr-17-MGI" secondAttribute="trailing" id="eaA-69-9T7"/>
+                            <constraint firstItem="fDr-17-MGI" firstAttribute="leading" secondItem="GTl-ec-Cfw" secondAttribute="leading" id="qpc-x9-dU6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ego-JU-7Mx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vAJ-Kd-cHM"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bSl-fV-3WQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1556.521739130435" y="-531.02678571428567"/>
         </scene>
         <!--Diary-->
         <scene sceneID="rvt-Cc-AKP">
@@ -62,5 +96,6 @@
     </scenes>
     <resources>
         <image name="book" catalog="system" width="64" height="50"/>
+        <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>
 </document>
