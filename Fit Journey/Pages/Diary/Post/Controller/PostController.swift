@@ -42,6 +42,7 @@ class PostController: UIViewController {
         let duration:Int? = Int(durationTF!.text!)
         DataStore().create(titleTF.text!, duration!, date!)
         print("data saved")
+        
         navigationController?.popViewController(animated: true)
         dismiss(animated: true, completion: nil)
     }
