@@ -16,8 +16,8 @@ class DiaryController : UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
-        loadTableView()
         self.data = DataStore().retrieve()
+        self.loadTableView()
     }
     @IBAction func writeIsTapped(_ sender: Any) {
         print("button write is tapped")
@@ -28,5 +28,9 @@ class DiaryController : UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "DataListCell", bundle: nil), forCellReuseIdentifier: "dataCell")
+    }
+    
+    override func viewWillAppear(_ animated: Bool){
+          tableView.reloadData()
     }
 }
