@@ -29,9 +29,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pfi-zY-NMb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Diary" id="6MH-Ja-r3p">
+                    <navigationItem key="navigationItem" title="Diary" largeTitleDisplayMode="always" id="6MH-Ja-r3p">
                         <barButtonItem key="backBarButtonItem" title="Diary" id="cGC-1W-BhJ"/>
                         <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="MDo-5T-Kb2">
+                            <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="writeIsTapped:" destination="4si-df-A9q" id="AtR-Ij-s0A"/>
                             </connections>
