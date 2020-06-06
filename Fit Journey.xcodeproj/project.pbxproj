@@ -24,8 +24,8 @@
 		B055BD34248B84C800CB9C8F /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD33248B84C800CB9C8F /* DataModel.swift */; };
 		B055BD38248B8BD500CB9C8F /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B055BD37248B8BD500CB9C8F /* HealthKit.framework */; };
 		B055BD3E248B8E5900CB9C8F /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD3D248B8E5900CB9C8F /* PostData.swift */; };
-		B055BD40248B8F5900CB9C8F /* FormView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B055BD3F248B8F5900CB9C8F /* FormView.xib */; };
-		B055BD42248B8F9F00CB9C8F /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD41248B8F9F00CB9C8F /* FormTableViewCell.swift */; };
+		B055BD44248B90A800CB9C8F /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B055BD43248B90A800CB9C8F /* Post.storyboard */; };
+		B055BD46248B918300CB9C8F /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BD45248B918300CB9C8F /* PostController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +70,8 @@
 		B055BD35248B8BD500CB9C8F /* Fit Journey.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Fit Journey.entitlements"; sourceTree = "<group>"; };
 		B055BD37248B8BD500CB9C8F /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		B055BD3D248B8E5900CB9C8F /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
-		B055BD3F248B8F5900CB9C8F /* FormView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormView.xib; sourceTree = "<group>"; };
-		B055BD41248B8F9F00CB9C8F /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
+		B055BD43248B90A800CB9C8F /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
+		B055BD45248B918300CB9C8F /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -247,8 +247,7 @@
 		B055BD3B248B8E3300CB9C8F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B055BD3F248B8F5900CB9C8F /* FormView.xib */,
-				B055BD41248B8F9F00CB9C8F /* FormTableViewCell.swift */,
+				B055BD43248B90A800CB9C8F /* Post.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,6 +255,7 @@
 		B055BD3C248B8E3700CB9C8F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B055BD45248B918300CB9C8F /* PostController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,8 +368,8 @@
 				B055BD30248B819B00CB9C8F /* DataListCell.xib in Resources */,
 				B055BD2A248B7E3400CB9C8F /* Browse.storyboard in Resources */,
 				B055BD21248B789400CB9C8F /* RootTabBar.storyboard in Resources */,
+				B055BD44248B90A800CB9C8F /* Post.storyboard in Resources */,
 				B055BCF7248B70F600CB9C8F /* Preview Assets.xcassets in Resources */,
-				B055BD40248B8F5900CB9C8F /* FormView.xib in Resources */,
 				B055BCF4248B70F600CB9C8F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,11 +396,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				B055BD34248B84C800CB9C8F /* DataModel.swift in Sources */,
-				B055BD42248B8F9F00CB9C8F /* FormTableViewCell.swift in Sources */,
 				B055BD3E248B8E5900CB9C8F /* PostData.swift in Sources */,
 				B055BCEE248B70F400CB9C8F /* AppDelegate.swift in Sources */,
 				B055BD32248B820D00CB9C8F /* DataTableViewCell.swift in Sources */,
 				B055BD2C248B7E8000CB9C8F /* DiaryController.swift in Sources */,
+				B055BD46248B918300CB9C8F /* PostController.swift in Sources */,
 				B055BD1F248B735600CB9C8F /* MainController.swift in Sources */,
 				B055BCF0248B70F400CB9C8F /* SceneDelegate.swift in Sources */,
 				B055BD2E248B810F00CB9C8F /* DiaryController + Delegate.swift in Sources */,
