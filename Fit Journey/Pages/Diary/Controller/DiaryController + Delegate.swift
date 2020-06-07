@@ -50,6 +50,7 @@ extension DiaryController : UITableViewDataSource{
             self.reloadData()
         }
     }
+    
 }
 
 extension DiaryController : CellDelegate {

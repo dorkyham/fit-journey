@@ -31,6 +31,9 @@
 		B055BE0B248C7C6600CB9C8F /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BE0A248C7C6600CB9C8F /* DetailController.swift */; };
 		B055BE0D248C7D7B00CB9C8F /* ActivityDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B055BE0C248C7D7B00CB9C8F /* ActivityDataCell.xib */; };
 		B055BE0F248C7E2D00CB9C8F /* ActivityDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B055BE0E248C7E2D00CB9C8F /* ActivityDataCell.swift */; };
+		B091EA72248CBEAD00B4909C /* VideoCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B091EA71248CBEAD00B4909C /* VideoCollectionView.xib */; };
+		B091EA74248CBF0500B4909C /* VideoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091EA73248CBF0500B4909C /* VideoViewCell.swift */; };
+		B091EA77248CC01900B4909C /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B091EA76248CC01900B4909C /* BrowseController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +85,9 @@
 		B055BE0A248C7C6600CB9C8F /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		B055BE0C248C7D7B00CB9C8F /* ActivityDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityDataCell.xib; sourceTree = "<group>"; };
 		B055BE0E248C7E2D00CB9C8F /* ActivityDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDataCell.swift; sourceTree = "<group>"; };
+		B091EA71248CBEAD00B4909C /* VideoCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCollectionView.xib; sourceTree = "<group>"; };
+		B091EA73248CBF0500B4909C /* VideoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewCell.swift; sourceTree = "<group>"; };
+		B091EA76248CC01900B4909C /* BrowseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,7 +204,8 @@
 		B055BD23248B7D7C00CB9C8F /* Browse */ = {
 			isa = PBXGroup;
 			children = (
-				B055BD29248B7E3400CB9C8F /* Browse.storyboard */,
+				B091EA75248CC00800B4909C /* Controller */,
+				B091EA70248CBE9300B4909C /* View */,
 			);
 			path = Browse;
 			sourceTree = "<group>";
@@ -295,6 +302,24 @@
 			isa = PBXGroup;
 			children = (
 				B055BE0A248C7C6600CB9C8F /* DetailController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B091EA70248CBE9300B4909C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B055BD29248B7E3400CB9C8F /* Browse.storyboard */,
+				B091EA71248CBEAD00B4909C /* VideoCollectionView.xib */,
+				B091EA73248CBF0500B4909C /* VideoViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B091EA75248CC00800B4909C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B091EA76248CC01900B4909C /* BrowseController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -407,6 +432,7 @@
 				B055BD30248B819B00CB9C8F /* DataListCell.xib in Resources */,
 				B055BD2A248B7E3400CB9C8F /* Browse.storyboard in Resources */,
 				B055BD21248B789400CB9C8F /* RootTabBar.storyboard in Resources */,
+				B091EA72248CBEAD00B4909C /* VideoCollectionView.xib in Resources */,
 				B055BD44248B90A800CB9C8F /* Post.storyboard in Resources */,
 				B055BE0D248C7D7B00CB9C8F /* ActivityDataCell.xib in Resources */,
 				B055BCF7248B70F600CB9C8F /* Preview Assets.xcassets in Resources */,
@@ -436,10 +462,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B091EA74248CBF0500B4909C /* VideoViewCell.swift in Sources */,
 				B055BE01248BA66300CB9C8F /* FitJourneyDataModel.xcdatamodeld in Sources */,
 				B055BD3E248B8E5900CB9C8F /* PostData.swift in Sources */,
 				B055BE0B248C7C6600CB9C8F /* DetailController.swift in Sources */,
 				B055BCEE248B70F400CB9C8F /* AppDelegate.swift in Sources */,
+				B091EA77248CC01900B4909C /* BrowseController.swift in Sources */,
 				B055BE04248BA70700CB9C8F /* DataStore.swift in Sources */,
 				B055BD32248B820D00CB9C8F /* DataTableViewCell.swift in Sources */,
 				B055BD2C248B7E8000CB9C8F /* DiaryController.swift in Sources */,

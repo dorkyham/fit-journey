@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Diary-->
+        <!--Activity-->
         <scene sceneID="Zlw-de-m7M">
             <objects>
                 <viewController id="4si-df-A9q" customClass="DiaryController" customModule="Fit_Journey" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,22 +16,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4PR-Fd-ZUq">
-                                <rect key="frame" x="0.0" y="128" width="414" height="327"/>
+                                <rect key="frame" x="0.0" y="287" width="414" height="589"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Exercises" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cu6-ir-q2N">
-                                <rect key="frame" x="20" y="99" width="105" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calories You Burned" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oyd-eo-iSh">
+                                <rect key="frame" x="20" y="109" width="155" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gJt-BQ-Jg2">
-                                <rect key="frame" x="-8" y="496" width="430" height="375"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What I Eat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JbE-d6-4ON">
-                                <rect key="frame" x="20" y="463" width="82" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eB2-La-RRQ">
+                                <rect key="frame" x="20" y="138" width="81" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="My Exercises" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbT-lg-ahm">
+                                <rect key="frame" x="20" y="258" width="100" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -39,21 +44,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="4PR-Fd-ZUq" firstAttribute="trailing" secondItem="pfi-zY-NMb" secondAttribute="trailing" id="1Qp-lM-LbL"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="gJt-BQ-Jg2" secondAttribute="bottom" constant="-9" id="6w9-yH-fRI"/>
-                            <constraint firstItem="Cu6-ir-q2N" firstAttribute="leading" secondItem="e3x-mP-hwM" secondAttribute="leadingMargin" id="7mc-ga-KnN"/>
-                            <constraint firstItem="JbE-d6-4ON" firstAttribute="top" secondItem="4PR-Fd-ZUq" secondAttribute="bottom" constant="8" id="B9g-DH-LW3"/>
-                            <constraint firstItem="gJt-BQ-Jg2" firstAttribute="centerX" secondItem="4PR-Fd-ZUq" secondAttribute="centerX" id="EdF-1I-Dd1"/>
-                            <constraint firstItem="gJt-BQ-Jg2" firstAttribute="top" secondItem="JbE-d6-4ON" secondAttribute="bottom" constant="12" id="K0d-W6-exO"/>
-                            <constraint firstItem="gJt-BQ-Jg2" firstAttribute="leading" secondItem="e3x-mP-hwM" secondAttribute="leadingMargin" constant="-28" id="Qlp-mU-vWk"/>
-                            <constraint firstItem="Cu6-ir-q2N" firstAttribute="top" secondItem="pfi-zY-NMb" secondAttribute="top" constant="11" id="Ron-uY-Nj5"/>
-                            <constraint firstItem="4PR-Fd-ZUq" firstAttribute="top" secondItem="e3x-mP-hwM" secondAttribute="top" constant="128" id="SQR-cw-G7A"/>
+                            <constraint firstItem="4PR-Fd-ZUq" firstAttribute="top" secondItem="e3x-mP-hwM" secondAttribute="top" constant="287" id="SQR-cw-G7A"/>
                             <constraint firstItem="4PR-Fd-ZUq" firstAttribute="leading" secondItem="pfi-zY-NMb" secondAttribute="leading" id="Tvt-rC-TJ2"/>
-                            <constraint firstItem="Cu6-ir-q2N" firstAttribute="leading" secondItem="JbE-d6-4ON" secondAttribute="leading" id="ctn-QD-8Fh"/>
-                            <constraint firstAttribute="bottom" secondItem="4PR-Fd-ZUq" secondAttribute="bottom" constant="441" id="uuI-fX-R2o"/>
+                            <constraint firstAttribute="bottom" secondItem="4PR-Fd-ZUq" secondAttribute="bottom" constant="20" symbolic="YES" id="uuI-fX-R2o"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pfi-zY-NMb"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Diary" largeTitleDisplayMode="always" id="6MH-Ja-r3p">
+                    <navigationItem key="navigationItem" title="Activity" largeTitleDisplayMode="always" id="6MH-Ja-r3p">
                         <barButtonItem key="backBarButtonItem" title="Diary" id="cGC-1W-BhJ"/>
                         <barButtonItem key="rightBarButtonItem" image="square.and.pencil" catalog="system" id="MDo-5T-Kb2">
                             <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -63,6 +60,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="caloriesLabel" destination="eB2-La-RRQ" id="GLM-Eh-cvw"/>
                         <outlet property="tableView" destination="4PR-Fd-ZUq" id="gaU-Fk-9RD"/>
                         <segue destination="XNf-1P-vYN" kind="show" identifier="goToWritePost" id="wtW-8O-SkG"/>
                         <segue destination="fT7-mJ-p6V" kind="show" identifier="goToDetailActivity" id="yuN-vF-qHW"/>
@@ -72,11 +70,11 @@
             </objects>
             <point key="canvasLocation" x="721.73913043478262" y="-531.02678571428567"/>
         </scene>
-        <!--Diary-->
+        <!--Activity-->
         <scene sceneID="rvt-Cc-AKP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pqo-Nt-0qk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Diary" image="book" catalog="system" selectedImage="book" id="3hS-xk-9Ak"/>
+                    <tabBarItem key="tabBarItem" title="Activity" image="calendar" catalog="system" selectedImage="calendar" id="3hS-xk-9Ak"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lzy-bI-DPs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -113,7 +111,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="book" catalog="system" width="64" height="50"/>
+        <image name="calendar" catalog="system" width="64" height="52"/>
         <image name="square.and.pencil" catalog="system" width="64" height="58"/>
     </resources>
 </document>

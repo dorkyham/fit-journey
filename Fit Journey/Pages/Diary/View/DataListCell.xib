@@ -37,7 +37,7 @@
                         </connections>
                     </button>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ue-Tk-uIg">
-                        <rect key="frame" x="0.0" y="68" width="414" height="1"/>
+                        <rect key="frame" x="37" y="69" width="377" height="1"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
@@ -61,7 +61,7 @@
                 <outlet property="dataLabel" destination="u29-zq-98M" id="seI-Dd-evl"/>
                 <outlet property="dateLabel" destination="PI6-SZ-JHy" id="pJT-Cz-XpG"/>
             </connections>
-            <point key="canvasLocation" x="-59" y="-304"/>
+            <point key="canvasLocation" x="-59.420289855072468" y="-304.35267857142856"/>
         </tableViewCell>
     </objects>
 </document>

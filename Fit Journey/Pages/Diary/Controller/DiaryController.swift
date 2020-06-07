@@ -13,12 +13,21 @@ class DiaryController : UIViewController, ReloadData {
     
     var data : [ActivityModel]?
     var dataPerOne : ActivityModel?
+    var calories : Int? = 0
     
+    @IBOutlet weak var caloriesLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         self.data = DataStore().retrieve()
         self.loadTableView()
+        
+        for oneData in data!{
+            calories! += oneData.calories
+        }
+        
+        caloriesLabel.text = "\(calories ?? 0)"
+        
     }
     @IBAction func writeIsTapped(_ sender: Any) {
         print("button write is tapped")
