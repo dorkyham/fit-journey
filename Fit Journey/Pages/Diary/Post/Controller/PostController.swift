@@ -29,7 +29,9 @@ class PostController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.datePicker.datePickerMode = .date
+        durationTF.keyboardType = .asciiCapableNumberPad
+        caloriesTF.keyboardType = .asciiCapableNumberPad
+        self.datePicker.datePickerMode = .time
         self.datePicker.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
         self.datePicker.maximumDate = Date()
         dateTF.inputView = self.datePicker
