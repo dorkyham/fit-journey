@@ -106,26 +106,25 @@ class DataStore {
 //    }
 //
 //    // fungsi menghapus by email user
-//    func delete(_ email:String){
-//
-//        // referensi ke AppDelegate
-//        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-//
-//        // managed context
-//        let managedContext = appDelegate.persistentContainer.viewContext
-//
-//        // fetch data to delete
-//        let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "User")
-//        fetchRequest.predicate = NSPredicate(format: "email = %@", email)
-//
-//        do{
-//            let dataToDelete = try managedContext.fetch(fetchRequest)[0] as! NSManagedObject
-//            managedContext.delete(dataToDelete)
-//
-//            try managedContext.save()
-//        }catch let err{
-//            print(err)
-//        }
-//
-//    }
+    func delete(_ row: Int){
+
+        // referensi ke AppDelegate
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+
+        // managed context
+        let managedContext = appDelegate.persistentContainer.viewContext
+
+        // fetch data to delete
+        let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Activity")
+        //fetchRequest.predicate = NSPredicate(format: "email = %@", email)
+
+        do{
+            let dataToDelete = try managedContext.fetch(fetchRequest)[row] as! NSManagedObject
+            managedContext.delete(dataToDelete)
+
+            try managedContext.save()
+        }catch let err{
+            print(err)
+        }
+    }
 }

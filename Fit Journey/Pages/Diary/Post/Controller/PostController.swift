@@ -31,7 +31,7 @@ class PostController: UIViewController {
         super.viewDidLoad()
         durationTF.keyboardType = .asciiCapableNumberPad
         caloriesTF.keyboardType = .asciiCapableNumberPad
-        self.datePicker.datePickerMode = .time
+        self.datePicker.datePickerMode = .dateAndTime
         self.datePicker.addTarget(self, action: #selector(dateChanged), for: .valueChanged)
         self.datePicker.maximumDate = Date()
         dateTF.inputView = self.datePicker
@@ -43,7 +43,7 @@ class PostController: UIViewController {
     
     @objc func dateChanged (datePicker : UIDatePicker, activeTF : UITextField) {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd MMM y"
+        dateFormatter.dateFormat = "dd MMM y hh:mm aa"
         dateTF.text = dateFormatter.string(from:datePicker.date)
         date = datePicker.date
     }
@@ -59,10 +59,13 @@ class PostController: UIViewController {
             let calories:Int? = Int(caloriesTF!.text!)
             DataStore().create(titleTF.text!, duration!, date!, calories!)
             print("data saved")
-            
             delegate?.reloadData()
-            navigationController?.popViewController(animated: true)
-            dismiss(animated: true, completion: nil)
+            let alert = UIAlertController(title: "Data Saved", message: "Your activity has been saved", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            self.navigationController?.popViewController(animated: true)
+            self.dismiss(animated: true, completion: nil)
+            
         }
     }
 }

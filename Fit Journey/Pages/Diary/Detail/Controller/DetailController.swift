@@ -44,10 +44,10 @@ extension DetailController : UITableViewDelegate, UITableViewDataSource {
         else if indexPath.row == 1{
             let formatter = DateFormatter()
             //then again set the date format whhich type of output you need
-            formatter.dateFormat = "dd-MMM-yyyy"
+            formatter.dateFormat = "hh:mm aa"
             // again convert your date to string
             let date = formatter.string(from: activityData!.date)
-            cell?.activityTitle.text = "Exercise Date"
+            cell?.activityTitle.text = "Exercise Time"
             cell?.activityTF.text = date
         }
         

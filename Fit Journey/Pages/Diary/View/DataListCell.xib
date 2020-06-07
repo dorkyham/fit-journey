@@ -36,6 +36,11 @@
                             <action selector="onClick:" destination="RaH-5B-Wnt" eventType="touchUpInside" id="E9Y-gU-Ncx"/>
                         </connections>
                     </button>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Ue-Tk-uIg">
+                        <rect key="frame" x="0.0" y="68" width="414" height="1"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="u29-zq-98M" firstAttribute="leading" secondItem="33z-Bw-UH2" secondAttribute="leading" constant="37" id="ANS-sc-fOJ"/>
@@ -56,7 +61,7 @@
                 <outlet property="dataLabel" destination="u29-zq-98M" id="seI-Dd-evl"/>
                 <outlet property="dateLabel" destination="PI6-SZ-JHy" id="pJT-Cz-XpG"/>
             </connections>
-            <point key="canvasLocation" x="-78.260869565217391" y="-296.31696428571428"/>
+            <point key="canvasLocation" x="-59" y="-304"/>
         </tableViewCell>
     </objects>
 </document>
