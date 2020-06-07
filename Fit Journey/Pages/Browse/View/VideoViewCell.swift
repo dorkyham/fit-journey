@@ -7,12 +7,26 @@
 //
 
 import UIKit
+import AVFoundation
 
-class VideoViewCell: UICollectionViewCell {
+class VideoViewCell: UITableViewCell {
     
-    @IBOutlet weak var video_layer: VideoViewCell!
+    
+    @IBOutlet weak var video_layer: UIView!
+    
+    var avQueuePlayer   : AVQueuePlayer?
+    var avPlayerLayer   : AVPlayerLayer?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+    }
+    
+    func addPlayer(for url: URL) {
+        self.avQueuePlayer = AVQueuePlayer(url: url)
+        self.avPlayerLayer = AVPlayerLayer(player: self.avQueuePlayer!)
+        self.avPlayerLayer?.frame = self.video_layer.bounds
+        self.avPlayerLayer?.fillMode = .both
+     self.video_layer.layer.addSublayer(self.avPlayerLayer!)
+        self.avQueuePlayer?.play()
     }
 }
