@@ -13,12 +13,13 @@ struct ActivityModel{
     let title: String
     let duration: Int
     let date : Date
+    let calories : Int
 }
 
 class DataStore {
     
     // fungsi tambah data
-    func create(_ title:String, _ duration:Int, _ date:Date){
+    func create(_ title:String, _ duration:Int, _ date:Date, _ calories: Int){
         
         // referensi ke AppDelegate
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
@@ -34,6 +35,7 @@ class DataStore {
         insert.setValue(title, forKey: "title")
         insert.setValue(duration, forKey: "duration")
         insert.setValue(date, forKey: "date")
+        insert.setValue(calories, forKey: "calories")
         
         do{
             // save data ke entity user core data
@@ -64,7 +66,7 @@ class DataStore {
             result.forEach{ activity in
                 activities.append(
                     ActivityModel(
-                        title: activity.value(forKey: "title") as! String, duration: activity.value(forKey: "duration") as! Int, date: activity.value(forKey: "date") as! Date
+                        title: activity.value(forKey: "title") as! String, duration: activity.value(forKey: "duration") as! Int, date: activity.value(forKey: "date") as! Date, calories: activity.value(forKey: "calories") as! Int
                     )
                 )
             }

@@ -7,11 +7,12 @@
 //
 
 import UIKit
-import CloudKit
+import CoreData
 
-class DiaryController : UIViewController {
+class DiaryController : UIViewController, ReloadData {
     
     var data : [ActivityModel]?
+    var dataPerOne : ActivityModel?
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -28,9 +29,26 @@ class DiaryController : UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "DataListCell", bundle: nil), forCellReuseIdentifier: "dataCell")
+        tableView.reloadData()
     }
     
-    override func viewWillAppear(_ animated: Bool){
-          tableView.reloadData()
+    func reloadData() {
+        DispatchQueue.main.async {
+            self.loadTableView()
+        }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToWritePost" {
+            let destinationVC = segue.destination as! PostController
+            destinationVC.delegate = self
+        }
+        
+        else if segue.identifier == "goToDetailActivity" {
+            let destinationVC = segue.destination as! DetailController
+            destinationVC.activityData = dataPerOne
+        }
+    }
+    
 }
+

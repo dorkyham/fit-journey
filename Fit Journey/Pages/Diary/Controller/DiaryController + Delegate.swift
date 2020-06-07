@@ -30,18 +30,22 @@ extension DiaryController : UITableViewDataSource{
         //then again set the date format whhich type of output you need
         formatter.dateFormat = "dd-MMM-yyyy"
         // again convert your date to string
-        var date = formatter.string(from: (data?[indexPath.row].date)!)
+        let date = formatter.string(from: (data?[indexPath.row].date)!)
 
+        cell?.cellNumber = indexPath.row
         cell?.dateLabel.text = date
         cell?.delegate = self
         return cell!
     }
     
-    
 }
 
 extension DiaryController : CellDelegate {
-    func buttonDidTap(){
+    
+    func buttonDidTap(cellNumber:Int){
         print("button tapped")
+        self.dataPerOne = data?[cellNumber]
+        performSegue(withIdentifier: "goToDetailActivity", sender: nil)
     }
+    
 }

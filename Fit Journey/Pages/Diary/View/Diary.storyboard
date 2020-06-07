@@ -15,9 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4PR-Fd-ZUq">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4PR-Fd-ZUq">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="876"/>
-                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.91764705882352937" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -40,7 +40,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="4PR-Fd-ZUq" id="gaU-Fk-9RD"/>
-                        <segue destination="XNf-1P-vYN" kind="presentation" identifier="goToWritePost" id="vQu-Pz-hsr"/>
+                        <segue destination="XNf-1P-vYN" kind="show" identifier="goToWritePost" id="wtW-8O-SkG"/>
+                        <segue destination="fT7-mJ-p6V" kind="show" identifier="goToDetailActivity" id="yuN-vF-qHW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CnR-Iv-UM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -51,7 +52,7 @@
         <scene sceneID="rvt-Cc-AKP">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pqo-Nt-0qk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Diary" selectedImage="book" catalog="system" id="3hS-xk-9Ak"/>
+                    <tabBarItem key="tabBarItem" title="Diary" image="book" catalog="system" selectedImage="book" id="3hS-xk-9Ak"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lzy-bI-DPs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -75,6 +76,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IOj-5d-NVs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1556.521739130435" y="-531.02678571428567"/>
+        </scene>
+        <!--Details-->
+        <scene sceneID="F3y-EE-pVq">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Details" id="fT7-mJ-p6V" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="X9v-Xk-egu"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5f7-Uy-ifp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1612" y="192"/>
         </scene>
     </scenes>
     <resources>

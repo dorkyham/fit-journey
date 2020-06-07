@@ -8,10 +8,18 @@
 
 import UIKit
 
+protocol ReloadData {
+    func reloadData()
+}
+
 class PostController: UIViewController {
     let datePicker = UIDatePicker()
     var date : Date?
     var pickerToolBar: UIToolbar!
+    var delegate : ReloadData?
+    
+    
+    @IBOutlet weak var caloriesTF: UITextField!
     
     @IBOutlet weak var titleTF: UITextField!
     
@@ -39,11 +47,20 @@ class PostController: UIViewController {
     }
     
     @IBAction func onClick(_ sender: Any) {
-        let duration:Int? = Int(durationTF!.text!)
-        DataStore().create(titleTF.text!, duration!, date!)
-        print("data saved")
-        
-        navigationController?.popViewController(animated: true)
-        dismiss(animated: true, completion: nil)
+        if titleTF.text == "" || durationTF.text == "" || dateTF.text == "" || caloriesTF.text == "" {
+            let alert = UIAlertController(title: "Empty Field", message: "Make sure to fill all fields", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+        else{
+            let duration:Int? = Int(durationTF!.text!)
+            let calories:Int? = Int(caloriesTF!.text!)
+            DataStore().create(titleTF.text!, duration!, date!, calories!)
+            print("data saved")
+            
+            delegate?.reloadData()
+            navigationController?.popViewController(animated: true)
+            dismiss(animated: true, completion: nil)
+        }
     }
 }

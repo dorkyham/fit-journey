@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="66" id="NNL-GS-1VE" customClass="ActivityDataCell" customModule="Fit_Journey" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NNL-GS-1VE" id="9rY-vI-1R3">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="66"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kic-Hy-Bhu">
+                        <rect key="frame" x="20" y="23" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z4d-gN-Pgk">
+                        <rect key="frame" x="75" y="16" width="319" height="34"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="kic-Hy-Bhu" firstAttribute="leading" secondItem="9rY-vI-1R3" secondAttribute="leading" constant="20" id="9l1-hF-8EP"/>
+                    <constraint firstItem="Z4d-gN-Pgk" firstAttribute="top" secondItem="9rY-vI-1R3" secondAttribute="top" constant="16" id="Ku7-7D-0ju"/>
+                    <constraint firstAttribute="bottom" secondItem="kic-Hy-Bhu" secondAttribute="bottom" constant="22" id="NPa-1v-9LK"/>
+                    <constraint firstAttribute="bottom" secondItem="Z4d-gN-Pgk" secondAttribute="bottom" constant="16" id="Vns-mC-OjZ"/>
+                    <constraint firstAttribute="trailing" secondItem="Z4d-gN-Pgk" secondAttribute="trailing" constant="20" id="ha8-Dr-8cS"/>
+                    <constraint firstItem="kic-Hy-Bhu" firstAttribute="top" secondItem="9rY-vI-1R3" secondAttribute="top" constant="23" id="lbZ-az-XJZ"/>
+                    <constraint firstItem="Z4d-gN-Pgk" firstAttribute="leading" secondItem="kic-Hy-Bhu" secondAttribute="trailing" constant="13" id="rH7-Zi-qhe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="activityTF" destination="Z4d-gN-Pgk" id="AGK-t3-62h"/>
+                <outlet property="activityTitle" destination="kic-Hy-Bhu" id="8aZ-nz-oRv"/>
+            </connections>
+            <point key="canvasLocation" x="208.69565217391306" y="6.0267857142857144"/>
+        </tableViewCell>
+    </objects>
+</document>

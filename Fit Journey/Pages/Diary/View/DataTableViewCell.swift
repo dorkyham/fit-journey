@@ -9,13 +9,14 @@
 import UIKit
 
 protocol CellDelegate {
-    func buttonDidTap()
+    func buttonDidTap(cellNumber:Int)
 }
 
 class DataTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    var cellNumber: Int?
     var delegate: CellDelegate?
     
     override func awakeFromNib() {
@@ -29,6 +30,6 @@ class DataTableViewCell: UITableViewCell {
     }
 
     @IBAction func onClick(_ sender: Any) {
-        delegate?.buttonDidTap()
+        delegate?.buttonDidTap(cellNumber: cellNumber!)
     }
 }
